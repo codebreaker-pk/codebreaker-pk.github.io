@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prashant Kumar | Data Scientist & Developer</title>
+    <meta name="description" content="Portfolio of Prashant Kumar, Data Scientist and Blockchain Developer">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Three.js for 3D animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dark-mode.css">
+</head>
+<body>
+    <!-- Loading Animation -->
+    <div id="loader-wrapper">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Header & Navigation -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">PK</a>
+            </div>
+            <nav id="desktop-nav">
+                <ul>
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="nav-right">
+                <div class="dark-mode-toggle" id="dark-mode-toggle">
+                    <i class="fas fa-moon"></i>
+                    <i class="fas fa-sun"></i>
+                </div>
+                <div class="hamburger" id="hamburger">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Navigation Menu -->
+    <div class="mobile-nav" id="mobile-nav">
+        <ul>
+            <li><a href="index.html" class="mobile-nav-link active">Home</a></li>
+            <li><a href="about.html" class="mobile-nav-link">About</a></li>
+            <li><a href="projects.html" class="mobile-nav-link">Projects</a></li>
+            <li><a href="contact.html" class="mobile-nav-link">Contact</a></li>
+        </ul>
+    </div>
+
+    <!-- Hero Section with 3D Animation -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>Hi, I'm <span class="gradient-text">Prashant Kumar</span></h1>
+                    <h2>Data Scientist & Blockchain Developer</h2>
+                    <p>Building innovative solutions at the intersection of data science, blockchain, and software development.</p>
+                    <div class="cta-buttons">
+                        <a href="projects.html" class="btn primary-btn">View Projects</a>
+                        <a href="contact.html" class="btn secondary-btn">Contact Me</a>
+                    </div>
+                </div>
+                <div class="hero-3d">
+                    <!-- 3D Animation Container -->
+                    <canvas id="hero-canvas"></canvas>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="mouse"></div>
+            <p>Scroll Down</p>
+        </div>
+    </section>
+
+    <!-- Skills Overview Section -->
+    <section id="skills-overview" class="skills-overview">
+        <div class="container">
+            <div class="section-header">
+                <h2>My <span class="gradient-text">Expertise</span></h2>
+                <div class="header-bar"></div>
+            </div>
+            
+            <div class="expertise-cards">
+                <div class="expertise-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="expertise-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3>Data Science</h3>
+                    <p>Applying machine learning and data analysis to solve complex problems and extract valuable insights.</p>
+                    <a href="about.html#data-science" class="expertise-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+                
+                <div class="expertise-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="expertise-icon">
+                        <i class="fas fa-link"></i>
+                    </div>
+                    <h3>Blockchain</h3>
+                    <p>Building decentralized applications and smart contracts for secure and transparent systems.</p>
+                    <a href="about.html#blockchain" class="expertise-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+                
+                <div class="expertise-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="expertise-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3>Web Development</h3>
+                    <p>Creating responsive and user-friendly web applications with modern technologies.</p>
+                    <a href="about.html#web-dev" class="expertise-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Projects Section -->
+    <section id="featured-projects" class="featured-projects">
+        <div class="container">
+            <div class="section-header">
+                <h2>Featured <span class="gradient-text">Projects</span></h2>
+                <div class="header-bar"></div>
+            </div>
+            
+            <div class="featured-project-item">
+                <div class="featured-project-content">
+                    <span class="featured-label">Featured Project</span>
+                    <h3>Blockchain For Secure Medical Records</h3>
+                    <div class="featured-project-description">
+                        <p>A blockchain-based system for secure and efficient medical records management, enhancing data security by 40% and reducing transaction times by 50%.</p>
+                    </div>
+                    <div class="project-tech">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>JavaScript</span>
+                        <span>Hardhat</span>
+                        <span>Web3.js</span>
+                        <span>SQL</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/codebreaker-pk/Land_Registry_Dapp" target="_blank" class="btn small-btn"><i class="fab fa-github"></i> Code</a>
+                        <a href="projects.html#medical-records" class="btn small-btn secondary-btn"><i class="fas fa-eye"></i> View Details</a>
+                    </div>
+                </div>
+                <div class="featured-project-image">
+                    <img src="https://cdn.dribbble.com/users/1358460/screenshots/14313986/media/cf14d4ef432f3a0805b012c64d141286.jpg" alt="Medical Records Project">
+                </div>
+            </div>
+            
+            <div class="featured-project-item reverse">
+                <div class="featured-project-content">
+                    <span class="featured-label">Featured Project</span>
+                    <h3>Real-Time Speech Emotion Analysis</h3>
+                    <div class="featured-project-description">
+                        <p>A system that analyzes emotions in real-time speech data from social media streams using advanced machine learning techniques.</p>
+                    </div>
+                    <div class="project-tech">
+                        <span>Python</span>
+                        <span>TensorFlow</span>
+                        <span>NLP</span>
+                        <span>Audio Processing</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/codebreaker-pk" target="_blank" class="btn small-btn"><i class="fab fa-github"></i> Code</a>
+                        <a href="projects.html#speech-emotion" class="btn small-btn secondary-btn"><i class="fas fa-eye"></i> View Details</a>
+                    </div>
+                </div>
+                <div class="featured-project-image">
+                    <img src="https://img.freepik.com/free-vector/voice-message-concept-illustration_114360-5075.jpg" alt="Speech Emotion Analysis">
+                </div>
+            </div>
+            
+            <div class="view-all-projects">
+                <a href="projects.html" class="btn primary-btn">View All Projects</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Statistics Section -->
+    <section id="statistics" class="statistics">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-number" data-count="5">0</div>
+                    <div class="stat-title">Major Projects</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" data-count="3">0</div>
+                    <div class="stat-title">Years Experience</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" data-count="10">0</div>
+                    <div class="stat-title">Technologies</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" data-count="15">0</div>
+                    <div class="stat-title">Satisfied Clients</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Call to Action Section -->
+    <section id="cta" class="cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Let's Work Together on Your Next Project</h2>
+                <p>Have an exciting project in mind? I'd love to hear about it and explore how we can collaborate!</p>
+                <a href="contact.html" class="btn primary-btn">Get In Touch</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h3>Prashant Kumar</h3>
+                    <p>Data Scientist & Blockchain Developer</p>
+                </div>
+                <div class="footer-links">
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About</a>
+                    <a href="projects.html">Projects</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+                <div class="footer-social">
+                    <a href="https://www.linkedin.com/in/prashant-kumar-2a6a9820a/" target="_blank" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://github.com/codebreaker-pk" target="_blank" class="social-icon"><i class="fab fa-github"></i></a>
+                    <a href="https://wa.me/qr/USC5W6GBPEWEB1" target="_blank" class="social-icon"><i class="fab fa-whatsapp"></i></a>
+                    <a href="mailto:krprashant0412@gmail.com" class="social-icon"><i class="fas fa-envelope"></i></a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Prashant Kumar. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <a href="#home" class="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+    <script src="js/three-animations.js"></script>
+    <script src="js/dark-mode.js"></script>
+</body>
+</html>

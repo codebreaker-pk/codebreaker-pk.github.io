@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects | Prashant Kumar</title>
+    <meta name="description" content="Explore Prashant Kumar's portfolio of projects in data science, blockchain, and web development">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Three.js for 3D animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dark-mode.css">
+</head>
+<body>
+    <!-- Loading Animation -->
+    <div id="loader-wrapper">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Header & Navigation -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">PK</a>
+            </div>
+            <nav id="desktop-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="projects.html" class="active">Projects</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="nav-right">
+                <div class="dark-mode-toggle" id="dark-mode-toggle">
+                    <i class="fas fa-moon"></i>
+                    <i class="fas fa-sun"></i>
+                </div>
+                <div class="hamburger" id="hamburger">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Navigation Menu -->
+    <div class="mobile-nav" id="mobile-nav">
+        <ul>
+            <li><a href="index.html" class="mobile-nav-link">Home</a></li>
+            <li><a href="about.html" class="mobile-nav-link">About</a></li>
+            <li><a href="projects.html" class="mobile-nav-link active">Projects</a></li>
+            <li><a href="contact.html" class="mobile-nav-link">Contact</a></li>
+        </ul>
+    </div>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <section class="page-header project-header">
+            <div class="bg-particles" id="particles-js"></div>
+            <div class="container">
+                <h1>My <span class="gradient-text">Projects</span></h1>
+                <div class="breadcrumb">
+                    <a href="index.html">Home</a>
+                    <span class="separator">/</span>
+                    <span class="current">Projects</span>
+                </div>
+            </div>
+        </section>
+    
+        <!-- Project Categories Filter -->
+        <section class="project-filter">
+            <div class="container">
+                <div class="filter-buttons">
+                    <button class="filter-btn active" data-filter="all">All Projects</button>
+                    <button class="filter-btn" data-filter="data-science">Data Science</button>
+                    <button class="filter-btn" data-filter="blockchain">Blockchain</button>
+                    <button class="filter-btn" data-filter="web">Web Development</button>
+                </div>
+            </div>
+        </section>
+    
+        <!-- Projects Showcase -->
+        <section class="projects-showcase">
+            <div class="container">
+                <div class="projects-grid">
+                    <!-- Medical Records Project -->
+                    <div id="medical-records" class="project-card" data-category="blockchain">
+                        <div class="project-image">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpUXZt6GNbgc2cg8voXx4Sj1hJ2HHFOn7pAg&s" alt="Medical Records Project">
+                            <div class="project-overlay">
+                                <a href="#project-medical-modal" class="project-view btn-view">View Details</a>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-tags">
+                                <span class="project-tag">Blockchain</span>
+                                <span class="project-tag">Healthcare</span>
+                            </div>
+                            <h3>Blockchain For Secure Medical Records</h3>
+                            <p>A blockchain-based system for secure and efficient medical records management, enhancing data security by 40%.</p>
+                            <div class="project-tech">
+                                <span>HTML</span>
+                                <span>CSS</span>
+                                <span>JavaScript</span>
+                                <span>Hardhat</span>
+                                <span>Web3.js</span>
+                                <span>SQL</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/codebreaker-pk/Land_Registry_Dapp" target="_blank" class="project-link"><i class="fab fa-github"></i> GitHub</a>
+                                <a href="#project-medical-modal" class="project-link modal-trigger"><i class="fas fa-info-circle"></i> Details</a>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <!-- Bank DApp Project -->
+                    <div class="project-card" data-category="blockchain">
+                        <div class="project-image">
+                            <img src="https://img.freepik.com/free-vector/gradient-cryptocurrency-concept_23-2149165909.jpg" alt="Bank DApp">
+                            <div class="project-overlay">
+                                <a href="#project-bank-modal" class="project-view btn-view">View Details</a>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-tags">
+                                <span class="project-tag">Blockchain</span>
+                                <span class="project-tag">Finance</span>
+                            </div>
+                            <h3>Decentralized Banking Application</h3>
+                            <p>A blockchain-based banking system that allows secure transactions, deposits, and withdrawals using smart contracts.</p>
+                            <div class="project-tech">
+                                <span>Solidity</span>
+                                <span>React</span>
+                                <span>Web3.js</span>
+                                <span>Hardhat</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/codebreaker-pk/BankDapp" target="_blank" class="project-link"><i class="fab fa-github"></i> GitHub</a>
+                                <a href="#project-bank-modal" class="project-link modal-trigger"><i class="fas fa-info-circle"></i> Details</a>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <!-- Speech Emotion Analysis Project -->
+                    <div id="speech-emotion" class="project-card" data-category="data-science">
+                        <div class="project-image">
+                            <img src="https://img.freepik.com/free-vector/voice-message-concept-illustration_114360-5075.jpg" alt="Speech Emotion Analysis">
+                            <div class="project-overlay">
+                                <a href="#project-speech-modal" class="project-view btn-view">View Details</a>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-tags">
+                                <span class="project-tag">Data Science</span>
+                                <span class="project-tag">NLP</span>
+                            </div>
+                            <h3>Real-Time Speech Emotion Analysis</h3>
+                            <p>A system that analyzes emotions in real-time speech data from social media streams using advanced ML techniques.</p>
+                            <div class="project-tech">
+                                <span>Python</span>
+                                <span>TensorFlow</span>
+                                <span>NLP</span>
+                                <span>Audio Processing</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/codebreaker-pk" target="_blank" class="project-link"><i class="fab fa-github"></i> GitHub</a>
+                                <a href="#project-speech-modal" class="project-link modal-trigger"><i class="fas fa-info-circle"></i> Details</a>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <!-- Crop Recommendation Project -->
+                    <div class="project-card" data-category="data-science">
+                        <div class="project-image">
+                            <img src="https://img.freepik.com/free-photo/scientist-researcher-using-tablet-analysing-plant-health-condition-greenhouse-agriculture-farm-botanical-specialist-studying-organic-sustainable-food-laboratory_482257-48122.jpg" alt="Crop Recommendation">
+                            <div class="project-overlay">
+                                <a href="#project-crop-modal" class="project-view btn-view">View Details</a>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-tags">
+                                <span class="project-tag">Data Science</span>
+                                <span class="project-tag">Agriculture</span>
+                            </div>
+                            <h3>Crop & Fertilizers Recommendation System</h3>
+                            <p>ML-based system that recommends optimal crops and fertilizers based on soil conditions and environmental factors.</p>
+                            <div class="project-tech">
+                                <span>Python</span>
+                                <span>Machine Learning</span>
+                                <span>Data Analysis</span>
+                                <span>Flask</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/codebreaker-pk/edunet_crop_and_fertilizers_rs" target="_blank" class="project-link"><i class="fab fa-github"></i> GitHub</a>
+                                <a href="#project-crop-modal" class="project-link modal-trigger"><i class="fas fa-info-circle"></i> Details</a>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <!-- Smart Contract Frontend Project -->
+                    <div class="project-card" data-category="web blockchain">
+                        <div class="project-image">
+                            <img src="https://img.freepik.com/free-vector/gradient-nft-concept_23-2149193187.jpg" alt="Smart Contract Frontend">
+                            <div class="project-overlay">
+                                <a href="#project-smartcontract-modal" class="project-view btn-view">View Details</a>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-tags">
+                                <span class="project-tag">Web Development</span>
+                                <span class="project-tag">Blockchain</span>
+                            </div>
+                            <h3>Smart Contract Frontend</h3>
+                            <p>A modern front-end interface for interacting with Ethereum smart contracts, featuring a responsive design.</p>
+                            <div class="project-tech">
+                                <span>React</span>
+                                <span>Web3.js</span>
+                                <span>CSS</span>
+                                <span>Ethereum</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/codebreaker-pk/SmartContract-Frontend" target="_blank" class="project-link"><i class="fab fa-github"></i> GitHub</a>
+                                <a href="#project-smartcontract-modal" class="project-link modal-trigger"><i class="fas fa-info-circle"></i> Details</a>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <!-- Music Discovery Project -->
+                    <div class="project-card" data-category="web">
+                        <div class="project-image">
+                            <img src="https://img.freepik.com/free-vector/music-background-with-colorful-sound-waves_1017-32360.jpg" alt="Music Discovery Project">
+                            <div class="project-overlay">
+                                <a href="#project-music-modal" class="project-view btn-view">View Details</a>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-tags">
+                                <span class="project-tag">Mobile Development</span>
+                                <span class="project-tag">Music</span>
+                            </div>
+                            <h3>Personalized Music Discovery and Playlists</h3>
+                            <p>A mobile application for personalized music recommendations, implementing advanced algorithms to boost user satisfaction.</p>
+                            <div class="project-tech">
+                                <span>Java</span>
+                                <span>Kotlin</span>
+                                <span>Android Studio</span>
+                                <span>XML</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/codebreaker-pk" target="_blank" class="project-link"><i class="fab fa-github"></i> GitHub</a>
+                                <a href="#project-music-modal" class="project-link modal-trigger"><i class="fas fa-info-circle"></i> Details</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+        <!-- Project Modals -->
+        <div id="project-medical-modal" class="modal">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <div class="modal-header">
+                    <h2>Blockchain For Secure Medical Records</h2>
+                    <div class="modal-tags">
+                        <span>Blockchain</span>
+                        <span>Healthcare</span>
+                        <span>Data Security</span>
+                    </div>
+                </div>
+                <div class="modal-body">
+                    <div class="modal-image">
+                        <img src="https://cdn.dribbble.com/users/1358460/screenshots/14313986/media/cf14d4ef432f3a0805b012c64d141286.jpg" alt="Medical Records Project">
+                    </div>
+                    <div class="modal-details">
+                        <h3>Project Overview</h3>
+                        <p>A blockchain-based system for secure and efficient medical records management, enhancing data security and reducing transaction times.</p>
+                        
+                        <h3>Key Features</h3>
+                        <ul>
+                            <li>Secure storage of patient medical records using blockchain technology</li>
+                            <li>Role-based access control for healthcare providers</li>
+                            <li>Patient consent management for data sharing</li>
+                            <li>Immutable audit trail of all record accesses and modifications</li>
+                            <li>Encrypted data storage with secure key management</li>
+                        </ul>
+                        
+                        <h3>Technologies Used</h3>
+                        <div class="modal-tech">
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>JavaScript</span>
+                            <span>Solidity</span>
+                            <span>Hardhat</span>
+                            <span>Web3.js</span>
+                            <span>SQL</span>
+                            <span>Git</span>
+                        </div>
+                        
+                        <h3>Results & Impact</h3>
+                        <ul>
+                            <li>Engineered frontend, increasing user engagement by 30%</li>
+                            <li>Authored and deployed smart contracts, reducing transaction times by 50%</li>
+                            <li>Integrated blockchain functionality, improving data security by 40%</li>
+                            <li>Optimized system performance, security, and scalability, cutting costs by 25%</li>
+                            <li>Conducted user testing with 50+ users, boosting satisfaction by 35%</li>
+                        </ul>
+                        
+                        <div class="modal-cta">
+                            <a href="https://github.com/codebreaker-pk/Land_Registry_Dapp" target="_blank" class="btn primary-btn"><i class="fab fa-github"></i> View Repository</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Additional modals for other projects would go here -->
+    
+        <!-- Call to Action Section with dynamic background -->
+        <section id="cta" class="cta gradient-bg">
+            <div class="cta-shapes">
+                <div class="shape shape-1"></div>
+                <div class="shape shape-2"></div>
+                <div class="shape shape-3"></div>
+                <div class="shape shape-4"></div>
+            </div>
+            <div class="container">
+                <div class="cta-content">
+                    <h2>Have a project in mind?</h2>
+                    <p>Let's discuss how we can work together to bring your ideas to life!</p>
+                    <a href="contact.html" class="btn primary-btn glow-btn">Get In Touch</a>
+                </div>
+            </div>
+        </section>
+    
+        <!-- Footer -->
+        <footer class="modern-footer">
+            <div class="footer-wave">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+                    <path fill="#1a1a2e" fill-opacity="1" d="M0,288L48,272C96,256,192,224,288,197.3C384,171,480,149,576,165.3C672,181,768,235,864,250.7C960,267,1056,245,1152,224C1248,203,1344,181,1392,170.7L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+                </svg>
+            </div>
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-logo">
+                        <h3>Prashant Kumar</h3>
+                        <p>Data Scientist & Blockchain Developer</p>
+                    </div>
+                    <div class="footer-links">
+                        <a href="index.html">Home</a>
+                        <a href="about.html">About</a>
+                        <a href="projects.html">Projects</a>
+                        <a href="contact.html">Contact</a>
+                    </div>
+                    <div class="footer-social">
+                        <a href="https://www.linkedin.com/in/prashant-kumar-2a6a9820a/" target="_blank" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://github.com/codebreaker-pk" target="_blank" class="social-icon"><i class="fab fa-github"></i></a>
+                        <a href="https://wa.me/qr/USC5W6GBPEWEB1" target="_blank" class="social-icon"><i class="fab fa-whatsapp"></i></a>
+                        <a href="mailto:krprashant0412@gmail.com" class="social-icon"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>&copy; 2023 Prashant Kumar. All Rights Reserved.</p>
+                </div>
+            </div>
+        </footer>
+    
+        <!-- Back to Top Button -->
+        <a href="#" class="back-to-top">
+            <i class="fas fa-arrow-up"></i>
+        </a>
+    
+        <!-- Scripts -->
+        <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+        <script src="js/main.js"></script>
+        <script src="js/three-animations.js"></script>
+        <script src="js/dark-mode.js"></script>
+        <script src="js/projects.js"></script>
+    </body>
+    </html>

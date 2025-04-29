@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me | Prashant Kumar</title>
+    <meta name="description" content="Learn more about Prashant Kumar, his skills, experience, and background">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Three.js for 3D animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dark-mode.css">
+</head>
+<body>
+    <!-- Loading Animation -->
+    <div id="loader-wrapper">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Header & Navigation -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">PK</a>
+            </div>
+            <nav id="desktop-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html" class="active">About</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="nav-right">
+                <div class="dark-mode-toggle" id="dark-mode-toggle">
+                    <i class="fas fa-moon"></i>
+                    <i class="fas fa-sun"></i>
+                </div>
+                <div class="hamburger" id="hamburger">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Navigation Menu -->
+    <div class="mobile-nav" id="mobile-nav">
+        <ul>
+            <li><a href="index.html" class="mobile-nav-link">Home</a></li>
+            <li><a href="about.html" class="mobile-nav-link active">About</a></li>
+            <li><a href="projects.html" class="mobile-nav-link">Projects</a></li>
+            <li><a href="contact.html" class="mobile-nav-link">Contact</a></li>
+        </ul>
+    </div>
+
+    <!-- Page Header -->
+    <section class="page-header about-header">
+        <div class="container">
+            <h1>About <span class="gradient-text">Me</span></h1>
+            <div class="breadcrumb">
+                <a href="index.html">Home</a>
+                <span class="separator">/</span>
+                <span class="current">About</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-image">
+                    <div class="image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cHJvZmVzc2lvbmFsfGVufDB8fDB8fHww" alt="Prashant Kumar">
+                    </div>
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/in/prashant-kumar-2a6a9820a/" target="_blank" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://github.com/codebreaker-pk" target="_blank" class="social-icon"><i class="fab fa-github"></i></a>
+                        <a href="https://wa.me/qr/USC5W6GBPEWEB1" target="_blank" class="social-icon"><i class="fab fa-whatsapp"></i></a>
+                        <a href="mailto:krprashant0412@gmail.com" class="social-icon"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+                <div class="about-text">
+                    <h3>Who I Am</h3>
+                    <p>As a driven Computer Science graduate with expertise in software development and data analytics, I am eager to leverage my technical skills to drive innovation and solve complex challenges.</p>
+                    <p>With hands-on experience in blockchain technology, including smart contracts and decentralized applications, I excel at tackling technical problems and delivering impactful solutions.</p>
+                    <p>I'm dedicated to contributing to projects that enhance efficiency and advance technology.</p>
+                    
+                    <div class="info-items">
+                        <div class="info-item">
+                            <h4>Name:</h4>
+                            <p>Prashant Kumar</p>
+                        </div>
+                        <div class="info-item">
+                            <h4>Email:</h4>
+                            <p>krprashant0412@gmail.com</p>
+                        </div>
+                        <div class="info-item">
+                            <h4>Location:</h4>
+                            <p>Mohali, Punjab, India</p>
+                        </div>
+                        <div class="info-item">
+                            <h4>Phone:</h4>
+                            <p>+91-7654792600</p>
+                        </div>
+                    </div>
+                    
+                    <a href="contact.html" class="btn primary-btn">Contact Me</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section with 3D Elements -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <div class="section-header">
+                <h2>My <span class="gradient-text">Skills</span></h2>
+                <div class="header-bar"></div>
+            </div>
+            
+            <div id="data-science" class="skills-section">
+                <h3 class="skills-category-title">Data Science & AI</h3>
+                <div class="skills-categories">
+                    <div class="skills-category">
+                        <div class="skills-icon">
+                            <i class="fas fa-database"></i>
+                        </div>
+                        <h4>Data Analysis</h4>
+                        <div class="skills-list">
+                            <div class="skill-item">
+                                <div class="skill-name">Python</div>
+                                <div class="skill-bar">
+                                    <div class="skill-level" style="width: 90%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-name">Pandas</div>
+                                <div class="skill-bar">
+                                    <div class="skill-level" style="width: 85%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-name">SQL</div>
+                                <div class="skill-bar">
+                                    <div class="skill-level" style="width: 80%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-name">Data Visualization</div>
+                                <div class="skill-bar">
+                                    <div class="skill-level" style="width: 85%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="skills-category">
+                        <div class="skills-icon">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <h4>Machine Learning</h4>
+                        <div class="skills-list">
+                            <div class="skill-item">
+                                <div class="skill-name">Scikit-learn</div>
+                                <div class="skill-bar">
+                                    <div class="skill-level" style="width: 80%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-name">TensorFlow</div>
+                                <div class="skill-bar">
+                                    <div class="skill-level" style="width: 75%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-name">Neural Networks</div>
+                                <div class="skill-bar">
+                                    <div class="skill-level" style="width: 70%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-name">NLP</div>
+                                <div class="skill-bar">
+                                    <div class="skill-level" style="width: 65%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="blockchain" class="skills-section">
+                <h3 class="skills-category-title">Blockchain Development</h3>
+                <div class="skills-categories">
+                    <div class="skills-category">
+                        <div class="skills-icon">
+                            <i class="fas fa-link"></i>
+                        </div>
+                        <h4>Smart Contracts</h4>
+                        <div class="skills-list">
+                            <div class="skill-item">
+                                <div class="skill-name">Solidity</div>
+                                <div class="skill-bar">
+                                    <div class="skill-level" style="width: 85%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-name">Hardhat</div>
+                                <div class="skill-bar">
+                                    <div class="skill-level" style="width: 80%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-name">Truffle</div>
+                                <div class="skill-bar">
+                                    <div class="skill-level" style="width: 75%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-name">Ethereum</div>
+                                <div class="skill-bar">
+                                    <div class="skill-level" style="width: 85%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="skills-category">
+                        <div class="skills-icon">
+                            <i class="fas fa-globe"></i>
+                        </div>
+                        <h4>Web3 Integration</h4>
+                        <div class="skills-list">
+                            <div class="skill-item">
+                                <div class="skill-name">Web3.js</div>
+                                <div class="skill-bar">
+                                    <div class="skill-level" style="width: 80%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-name">Ethers.js</div>
+                                <div class="skill-bar">
+                                    <div class="skill-level" style="width: 75%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-name">DApps</div>
+                                <div class="skill-bar">
+                                    <div class="skill-level" style="width: 80%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-name">MetaMask</div>
+                                <div class="skill-bar">
+                                    <div class="skill-level" style="width: 90%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="web-dev" class="skills-section">
+                <h3 class="skills-category-title">Web Development</h3>
+                <div class="skills-categories">
+                    <div class="skills-category">
+                        <div class="skills-icon">
+                            <i class="fas fa-laptop-code"></i>
+                        </div>
+                        <h4>Frontend</h4>
+                        <div class="skills-list">
+                            <div class="skill-item">
+                                <div class="skill-name">HTML/CSS</div>
+                                <div class="skill-bar">
+                                    <div class="skill-level" style="width: 95%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-name">JavaScript</div>
+                                <div class="skill-bar">
+                                    <div class="skill-level" style="width: 90%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-name">React</div>
+                                <div class="skill-bar">
+                                    <div class="skill-level" style="width: 80%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-name">Responsive Design</div>
+                                <div class="skill-bar">
+                                    <div class="skill-level" style="width: 90%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="skills-category">
+                        <div class="skills-icon">
+                            <i class="fas fa-server"></i>
+                        </div>
+                        <h4>Backend</h4>
+                        <div class="skills-list">
+                            <div class="skill-item">
+                                <div class="skill-name">Node.js</div>
+                                <div class="skill-bar">
+                                    <div class="skill-level" style="width: 75%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-name">Express</div>
+                                <div class="skill-bar">
+                                    <div class="skill-level" style="width: 70%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-name">MongoDB</div>
+                                <div class="skill-bar">
+                                    <div class="skill-level" style="width: 65%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-name">RESTful APIs</div>
+                                <div class="skill-bar">
+                                    <div class="skill-level" style="width: 80%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 3D Skills Cloud -->
+            <div class="skills-3d">
+                <div id="skills-canvas-container">
+                    <canvas id="skills-canvas"></canvas>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="education">
+        <div class="container">
+            <div class="section-header">
+                <h2>My <span class="gradient-text">Education</span></h2>
+                <div class="header-bar"></div>
+            </div>
+            
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">2021 - 2025</div>
+                    <div class="timeline-content">
+                        <h3>Bachelor of Technology - Computer Science Engineering</h3>
+                        <p class="timeline-location">Chandigarh University</p>
+                        <p>Percentage: 65.30 / 100</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">2021</div>
+                    <div class="timeline-content">
+                        <h3>Diploma - Mechanical Engineering</h3>
+                        <p class="timeline-location">Chandigarh Polytechnic College, Mohali</p>
+                        <p>PSBTE and IT | Percentage: 73.76 / 100</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">2018</div>
+                    <div class="timeline-content">
+                        <h3>10th Standard</h3>
+                        <p class="timeline-location">Bal Bharti School</p>
+                        <p>CBSE | Percentage: 67.80 / 100</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="additional-education">
+                <h3>Certifications & Trainings</h3>
+                
+                <div class="cert-grid">
+                    <div class="cert-item">
+                        <div class="cert-icon">
+                            <i class="fas fa-certificate"></i>
+                        </div>
+                        <div class="cert-content">
+                            <h4>Decode Java + DSA</h4>
+                            <p>Mastered Java and Data Structures & Algorithms, improving code efficiency by 20%.</p>
+                            <div class="cert-skills">
+                                <span>Java Programming</span>
+                                <span>Data Structures</span>
+                                <span>Algorithms</span>
+                                <span>OOP</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="cert-item">
+                        <div class="cert-icon">
+                            <i class="fas fa-laptop-code"></i>
+                        </div>
+                        <div class="cert-content">
+                            <h4>Summer Internship in Blockchain</h4>
+                            <p>Metacraft (Jul - Dec 2023)</p>
+                            <p>Developed smart contracts, reducing error rates by 25% and created front-end interfaces, improving user experience by 30%.</p>
+                            <div class="cert-skills">
+                                <span>HTML</span>
+                                <span>CSS</span>
+                                <span>JavaScript</span>
+                                <span>Solidity</span>
+                                <span>Blockchain</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action Section -->
+    <section id="cta" class="cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Want to know more about my projects?</h2>
+                <p>Check out my portfolio to see detailed case studies of my work!</p>
+                <a href="projects.html" class="btn primary-btn">View Projects</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h3>Prashant Kumar</h3>
+                    <p>Data Scientist & Blockchain Developer</p>
+                </div>
+                <div class="footer-links">
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About</a>
+                    <a href="projects.html">Projects</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+                <div class="footer-social">
+                    <a href="https://www.linkedin.com/in/prashant-kumar-2a6a9820a/" target="_blank" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://github.com/codebreaker-pk" target="_blank" class="social-icon"><i class="fab fa-github"></i></a>
+                    <a href="https://wa.me/qr/USC5W6GBPEWEB1" target="_blank" class="social-icon"><i class="fab fa-whatsapp"></i></a>
+                    <a href="mailto:krprashant0412@gmail.com" class="social-icon"><i class="fas fa-envelope"></i></a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Prashant Kumar. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <a href="#" class="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+    <script src="js/three-animations.js"></script>
+    <script src="js/dark-mode.js"></script>
+</body>
+</html>

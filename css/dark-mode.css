@@ -1,0 +1,91 @@
+/* dark-mode.css */
+[data-theme='dark'] {
+    --primary-color: #8F80FF;
+    --secondary-color: #FF7A95;
+    --dark-color: #F5F5F5;
+    --darker-color: #16161D;
+    --light-color: #1A1A2E;
+    --gray-color: #A0A0A0;
+    --shadow-color: rgba(0, 0, 0, 0.25);
+    --card-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    --gradient-bg: linear-gradient(135deg, #0f3460 0%, #16213e 50%, #1a1a2e 100%);
+  }
+  
+  [data-theme='dark'] body {
+    background-color: var(--light-color);
+    color: var(--dark-color);
+  }
+  
+  [data-theme='dark'] body::before {
+    background-image: 
+      radial-gradient(circle at 10% 10%, rgba(108, 99, 255, 0.1) 0%, transparent 30%),
+      radial-gradient(circle at 90% 90%, rgba(255, 101, 132, 0.1) 0%, transparent 30%),
+      radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.03) 0%, transparent 60%);
+  }
+  
+  [data-theme='dark'] #loader-wrapper {
+    background-color: var(--light-color);
+  }
+  
+  [data-theme='dark'] .loader {
+    border-color: var(--light-color);
+    border-top-color: var(--primary-color);
+  }
+  
+  [data-theme='dark'] header {
+    background-color: rgba(26, 26, 46, 0.95);
+  }
+  
+  [data-theme='dark'] .bar {
+    background-color: var(--dark-color);
+  }
+  
+  [data-theme='dark'] .mobile-nav {
+    background-color: var(--light-color);
+  }
+  
+  [data-theme='dark'] .project-header,
+  [data-theme='dark'] .contact-header {
+    background-color: #0d0d1a;
+  }
+  
+  [data-theme='dark'] .expertise-card,
+  [data-theme='dark'] .project-card,
+  [data-theme='dark'] .timeline-content,
+  [data-theme='dark'] .cert-item,
+  [data-theme='dark'] .contact-form,
+  [data-theme='dark'] .skills-category {
+    background-color: rgba(26, 26, 46, 0.9);
+  }
+  
+  [data-theme='dark'] .contact-item,
+  [data-theme='dark'] .info-items {
+    background-color: rgba(26, 26, 46, 0.5);
+  }
+  
+  [data-theme='dark'] .form-group input,
+  [data-theme='dark'] .form-group textarea {
+    background-color: rgba(26, 26, 46, 0.5);
+    border-color: #333;
+    color: var(--light-color);
+  }
+  
+  [data-theme='dark'] .featured-project-description {
+    background-color: rgba(26, 26, 46, 0.8);
+  }
+  
+  [data-theme='dark'] .filter-btn {
+    background-color: rgba(26, 26, 46, 0.8);
+    color: var(--light-color);
+  }
+  
+  [data-theme='dark'] .project-tech span,
+  [data-theme='dark'] .cert-skills span,
+  [data-theme='dark'] .modal-tech span {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: var(--light-color);
+  }
+  
+  [data-theme='dark'] .modern-footer {
+    background-color: #0d0d1a;
+  }
