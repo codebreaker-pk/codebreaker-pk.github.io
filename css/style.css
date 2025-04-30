@@ -2836,3 +2836,113 @@ header {
   }
 }
 
+
+
+
+/* Fix for project filter buttons visibility in dark mode */
+
+/* Ensure filter buttons are visible in both light and dark modes */
+.filter-btn {
+  font-family: var(--font-primary);
+  font-size: 16px;
+  font-weight: 500;
+  padding: 8px 20px;
+  border: none;
+  border-radius: 30px;
+  background-color: rgba(255, 255, 255, 0.8);
+  color: var(--dark-color);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+/* Dark mode specific fixes for filter buttons */
+[data-theme='dark'] .filter-btn {
+  background-color: rgba(26, 26, 46, 0.8); /* Dark background */
+  color: white !important; /* Force white text in dark mode */
+  border: 1px solid rgba(255, 255, 255, 0.1); /* Subtle border */
+}
+
+/* Active and hover state in dark mode */
+[data-theme='dark'] .filter-btn:hover,
+[data-theme='dark'] .filter-btn.active {
+  background-color: var(--primary-color) !important;
+  color: white !important;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(108, 99, 255, 0.3);
+}
+
+
+/* Fix for project skills/tags visibility in dark mode */
+
+/* Project technology/skill tags in all sections */
+.project-tech span,
+.featured-project-item .project-tech span,
+.project-card .project-tech span,
+.modal-tech span,
+.cert-skills span,
+.skill-item span,
+.tech-tag,
+.project-tag {
+    background-color: #f0f0f0; /* Light background in light mode */
+    color: var(--dark-color);
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 500;
+    display: inline-block;
+    margin: 3px;
+    transition: all 0.3s ease;
+}
+
+/* Dark mode specific fixes for all skill tags */
+[data-theme='dark'] .project-tech span,
+[data-theme='dark'] .featured-project-item .project-tech span,
+[data-theme='dark'] .project-card .project-tech span,
+[data-theme='dark'] .modal-tech span,
+[data-theme='dark'] .cert-skills span,
+[data-theme='dark'] .skill-item span,
+[data-theme='dark'] .tech-tag,
+[data-theme='dark'] .project-tag {
+    background-color: rgba(255, 255, 255, 0.1) !important; /* Slightly lighter background */
+    color: white !important; /* White text */
+    border: 1px solid rgba(255, 255, 255, 0.05); /* Subtle border */
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2); /* Subtle text shadow */
+}
+
+/* Hover effect for skill tags */
+[data-theme='dark'] .project-tech span:hover,
+[data-theme='dark'] .featured-project-item .project-tech span:hover,
+[data-theme='dark'] .project-card .project-tech span:hover,
+[data-theme='dark'] .tech-tag:hover,
+[data-theme='dark'] .project-tag:hover {
+    background-color: rgba(108, 99, 255, 0.2) !important; /* Highlight on hover */
+    transform: translateY(-2px);
+}
+
+/* Ensure all text elements in projects are visible in dark mode */
+[data-theme='dark'] .project-content h3,
+[data-theme='dark'] .featured-project-content h3,
+[data-theme='dark'] .project-content p,
+[data-theme='dark'] .featured-project-content p,
+[data-theme='dark'] .project-content .project-link,
+[data-theme='dark'] .featured-project-content .project-link {
+    color: white !important; /* Force white text */
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+/* Special handling for project links */
+[data-theme='dark'] .project-link,
+[data-theme='dark'] .expertise-link,
+[data-theme='dark'] .featured-project-content .project-links a {
+    color: var(--primary-color) !important; /* Use accent color for links */
+}
+
+/* Additional visibility improvements for any other elements */
+[data-theme='dark'] .featured-label,
+[data-theme='dark'] .project-category,
+[data-theme='dark'] .project-date {
+    color: var(--primary-color) !important;
+    visibility: visible !important;
+}
