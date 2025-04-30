@@ -621,7 +621,7 @@
   
   .scroll-indicator {
     position: absolute;
-    bottom: 30px;
+    bottom: 0px;
     left: 50%;
     transform: translateX(-50%);
     display: flex;
@@ -2522,4 +2522,317 @@
     position: relative;
     z-index: 1;
   }
+  
+  /* Modified footer background for Home and About pages in day mode */
+
+/* Target specific pages by their class or structure */
+body.home footer, 
+body.about footer,
+.home-template footer,
+.about-template footer,
+body[class*="home"] footer,
+body[class*="about"] footer,
+body footer {  /* Fallback if no classes are present */
+    background-color: rgba(0, 0, 0, 0.85) !important; /* Darker background to make white text visible */
+}
+
+/* Same for modern-footer if you're using that class */
+body.home .modern-footer,
+body.about .modern-footer,
+.home-template .modern-footer,
+.about-template .modern-footer,
+body[class*="home"] .modern-footer,
+body[class*="about"] .modern-footer,
+body .modern-footer {
+    background-color: rgba(0, 0, 0, 0.85) !important;
+}
+
+/* Only apply in light mode */
+body:not([data-theme='dark']) footer,
+body:not([data-theme='dark']) .modern-footer {
+    background-color: rgba(0, 0, 0, 0.85) !important;
+}
+
+  
+/* Modern CTA Section Styling */
+.cta {
+  padding: 100px 0;
+  background: var(--gradient-bg); /* Use your gradient background variable */
+  color: white;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Add decorative elements */
+.cta::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: 
+      url('data:image/svg+xml;utf8,<svg width="30" height="30" viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg"><circle cx="3" cy="3" r="1.5" fill="rgba(255,255,255,0.1)" /></svg>'),
+      radial-gradient(circle at 10% 10%, rgba(108, 99, 255, 0.2) 0%, transparent 30%),
+      radial-gradient(circle at 90% 90%, rgba(255, 101, 132, 0.2) 0%, transparent 30%);
+  opacity: 1;
+  z-index: 0;
+}
+
+/* Add floating shapes for decoration */
+.cta::after {
+  content: '';
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background: linear-gradient(45deg, rgba(108, 99, 255, 0.1), rgba(255, 101, 132, 0.1));
+  top: -150px;
+  right: -150px;
+  z-index: 0;
+}
+
+.cta-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 50px;
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transform: translateY(0);
+  transition: transform 0.3s ease;
+}
+
+.cta-content:hover {
+  transform: translateY(-5px);
+}
+
+.cta-content h2 {
+  font-family: var(--font-primary);
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: white;
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.cta-content p {
+  font-size: 18px;
+  margin-bottom: 30px;
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.6;
+}
+
+.cta .btn.primary-btn {
+  background: white;
+  color: var(--primary-color);
+  font-weight: 600;
+  padding: 14px 32px;
+  font-size: 18px;
+  border-radius: 50px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  border: none;
+}
+
+.cta .btn.primary-btn:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+  background: rgba(255, 255, 255, 0.9);
+}
+
+/* Adding a subtle animation effect */
+@keyframes cta-pulse {
+  0% {
+      box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.4);
+  }
+  70% {
+      box-shadow: 0 0 0 15px rgba(255, 255, 255, 0);
+  }
+  100% {
+      box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+  }
+}
+
+.cta .btn.primary-btn {
+  animation: cta-pulse 2s infinite;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .cta-content {
+      padding: 30px 20px;
+  }
+  
+  .cta-content h2 {
+      font-size: 28px;
+  }
+  
+  .cta-content p {
+      font-size: 16px;
+  }
+  
+  .cta .btn.primary-btn {
+      font-size: 16px;
+      padding: 12px 25px;
+  }
+}
+
+/* Fix for form fields in dark mode */
+
+/* Make form fields visible in dark mode */
+[data-theme='dark'] .form-group input,
+[data-theme='dark'] .form-group textarea,
+[data-theme='dark'] .form-group select {
+    color: white !important; /* Text color as you type */
+    background-color: rgba(30, 30, 50, 0.8) !important; /* Darker background */
+    border-color: rgba(255, 255, 255, 0.2) !important; /* Subtle border */
+}
+
+/* Style for placeholder text in dark mode */
+[data-theme='dark'] .form-group input::placeholder,
+[data-theme='dark'] .form-group textarea::placeholder {
+    color: rgba(255, 255, 255, 0.5) !important; /* Lighter color for placeholder */
+}
+
+/* Focus state in dark mode */
+[data-theme='dark'] .form-group input:focus,
+[data-theme='dark'] .form-group textarea:focus {
+    border-color: var(--primary-color) !important;
+    box-shadow: 0 0 0 3px rgba(108, 99, 255, 0.3) !important;
+    background-color: rgba(40, 40, 60, 0.9) !important; /* Slightly lighter on focus */
+}
+
+/* Make form labels visible in dark mode */
+[data-theme='dark'] .form-group label {
+    color: rgba(255, 255, 255, 0.9) !important; /* Light color for labels */
+}
+
+
+
+
+/* Fix for overlapped hero text - prevent other elements from covering it */
+
+/* Ensure main navigation stays in its proper layer */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000; /* High z-index for header */
+}
+
+/* Give hero section proper positioning and z-index */
+.hero {
+  position: relative;
+  z-index: 1; /* Lower than header but still positive */
+  padding-top: 120px !important; /* Add more padding at top to prevent overlap with header */
+}
+
+/* Make sure hero content is properly positioned */
+.hero-content {
+  position: relative;
+  z-index: 5; /* Higher than hero but lower than header */
+}
+
+/* Fix the heading element specifically */
+.hero-text h1 {
+  position: relative;
+  z-index: 10; /* Make sure it's above other hero elements */
+  color: white !important;
+  margin-top: 0 !important; /* Prevent unusual margins */
+  padding-top: 0 !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+/* Ensure no overlap with the "PK" logo */
+.logo a {
+  z-index: 1001; /* Make sure logo doesn't overlap incorrectly */
+}
+
+/* Fix for mobile view */
+@media (max-width: 768px) {
+  .hero {
+      padding-top: 100px !important; /* Slightly less padding on mobile */
+  }
+  
+  .hero-text {
+      margin-top: 0 !important;
+      padding-top: 0 !important;
+  }
+  
+  .hero-text h1 {
+      font-size: 32px !important;
+      line-height: 1.3 !important;
+      margin-bottom: 15px !important;
+  }
+}
+
+
+/* Adjusted scroll indicator position and mobile visibility */
+
+.scroll-indicator {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  opacity: 0.7;
+  z-index: 5;
+  margin: -50px auto 50px; /* Increased margin to move it further down */
+  padding-top: 20px; /* Additional padding on top */
+}
+
+.mouse {
+  width: 30px;
+  height: 50px;
+  border: 2px solid var(--gray-color);
+  border-radius: 20px;
+  position: relative;
+}
+
+.mouse::before {
+  content: '';
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 6px;
+  height: 6px;
+  background-color: var(--gray-color);
+  border-radius: 50%;
+  animation: scroll 2s infinite;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translate(-50%, 0);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-50%, 20px);
+    opacity: 0;
+  }
+}
+
+.scroll-indicator p {
+  margin-top: 10px;
+  font-size: 12px;
+  color: var(--gray-color);
+}
+
+/* Hide scroll indicator on mobile devices */
+@media (max-width: 768px) {
+  .scroll-indicator {
+      display: none; /* Completely hide on mobile */
+  }
+}
 
